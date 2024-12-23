@@ -1,5 +1,6 @@
 package com.example.task1.controller;
 
+import com.example.task1.domain.Owner;
 import com.example.task1.util.JwtUtil;
 import com.example.task1.service.OwnerService;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -38,5 +39,22 @@ public class AuthController {
             return Map.of("message", "Invalid credentials");
         }
     }
+
+    @PostMapping("/auth/register")
+    public Map<String, String> register(@RequestBody Map<String, String> registerData) {
+        String email = registerData.get("email");
+        String name = registerData.get("name");
+        String password = registerData.get("password");
+
+        Owner newOwner = new Owner();
+        newOwner.setEmail(email);
+        newOwner.setName(name);
+        newOwner.setPassword(password);
+
+        Owner savedOwner = ownerService.registerOwner(newOwner);
+
+        return Map.of("message", "User registered successfully", "id", String.valueOf(savedOwner.getId()));
+    }
+
 }
 
