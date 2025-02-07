@@ -24,6 +24,9 @@ public class AuthController {
         this.ownerService = ownerService;
     }
 
+    public JwtUtil getJwtUtil() {
+        return jwtUtil;
+    }
 
     @PostMapping("/login")
     public Map<String, String> login(@RequestBody Map<String, String> loginData) {

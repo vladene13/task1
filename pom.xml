@@ -77,6 +77,15 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-inline</artifactId>
+			<version>3.12.4</version> <!-- Asigură-te că folosești aceeași versiune ca înainte -->
+			<scope>test</scope>
+		</dependency>
+
+
+
 		<!-- H2 Database for Testing -->
 		<dependency>
 			<groupId>com.h2database</groupId>
@@ -92,22 +101,22 @@
 		</dependency>
 	</dependencies>
 
-<!--	<dependency>-->
-<!--		<groupId>io.jsonwebtoken</groupId>-->
-<!--		<artifactId>jjwt-api</artifactId>-->
-<!--		<version>0.11.5</version>-->
-<!--	</dependency>-->
+	<!--	<dependency>-->
+	<!--		<groupId>io.jsonwebtoken</groupId>-->
+	<!--		<artifactId>jjwt-api</artifactId>-->
+	<!--		<version>0.11.5</version>-->
+	<!--	</dependency>-->
 
-<!--	<dependency>-->
-<!--		<groupId>io.jsonwebtoken</groupId>-->
-<!--		<artifactId>jjwt-impl</artifactId>-->
-<!--		<version>0.11.5</version>-->
-<!--	</dependency>-->
-<!--	<dependency>-->
-<!--		<groupId>io.jsonwebtoken</groupId>-->
-<!--		<artifactId>jjwt-jackson</artifactId>-->
-<!--		<version>0.11.5</version>-->
-<!--	</dependency>-->
+	<!--	<dependency>-->
+	<!--		<groupId>io.jsonwebtoken</groupId>-->
+	<!--		<artifactId>jjwt-impl</artifactId>-->
+	<!--		<version>0.11.5</version>-->
+	<!--	</dependency>-->
+	<!--	<dependency>-->
+	<!--		<groupId>io.jsonwebtoken</groupId>-->
+	<!--		<artifactId>jjwt-jackson</artifactId>-->
+	<!--		<version>0.11.5</version>-->
+	<!--	</dependency>-->
 
 
 	<build>
