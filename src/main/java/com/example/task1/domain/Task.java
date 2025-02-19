@@ -3,6 +3,9 @@ package com.example.task1.domain;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Task {
     @Id
@@ -15,6 +18,18 @@ public class Task {
 
     @Column(name = "remaining_effort")
     private int remainingEffort;
+
+    @OneToMany(mappedBy = "task", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Comment> comments = new ArrayList<>();
+
+    // Getters and setters pentru comments
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
 
     @ManyToOne
     @JoinColumn(name = "owner_id", nullable = false)
